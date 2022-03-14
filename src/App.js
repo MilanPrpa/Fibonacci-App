@@ -1,15 +1,18 @@
 import './App.css';
-import { SplitScreen } from './Components/SplitScreen';
-
-const LeftHandComponent = () => {
-  return <h1>Left!</h1>;
-};
-const RightHandComponent = () => {
-  return <p>Right!</p>;
-};
+//import { Modal } from './Modal';
+//import { LargeProduct } from './products/LargeProduct';
+//import { SplitScreen } from './Components/SplitScreen';
+//import { SmallPerson } from './people/SmallPerson';
+//import { LargePerson } from './people/LargePerson';
+import { RegularList } from './RegularList';
+import { UserList } from './Components/UserList';
 
 function App() {
-  return <SplitScreen left={LeftHandComponent} right={RightHandComponent} />;
+  return (
+    <div>
+      <h2>Container</h2>
+    </div>
+  );
 }
 
 export default App;
