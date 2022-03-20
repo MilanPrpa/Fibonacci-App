@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { fibonacciAlgorithm } from '../utils/fibonacciAlgorithm';
+import DisplayFibNumber from './DisplayFibNumber';
 
 export default class InputForm extends React.Component {
   constructor(props) {
@@ -20,17 +21,20 @@ export default class InputForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={onsubmit}>
-        <input
-          type="text"
-          placeholder="Enter Nth Number Here"
-          value={this.state.fibnumber}
-          onChange={this.onChange}
-        />
-        <button onClick={() => fibonacciAlgorithm(this.state.fibnumber)}>
-          Enter
-        </button>
-      </form>
+      <div>
+        <form onSubmit={onsubmit}>
+          <input
+            type="text"
+            placeholder="Enter Nth Number Here"
+            value={this.state.fibnumber}
+            onChange={this.onChange}
+          />
+          <button onClick={() => fibonacciAlgorithm(this.state.fibnumber)}>
+            Enter
+          </button>
+          <DisplayFibNumber number={this.state.fibnumber} />
+        </form>
+      </div>
     );
   }
 }
