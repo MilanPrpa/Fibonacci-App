@@ -32,7 +32,6 @@ export default class InputForm extends React.Component {
           <button onClick={() => fibonacciAlgorithm(this.state.fibnumber)}>
             Enter
           </button>
-          <DisplayFibNumber number={this.state.fibnumber} />
         </form>
       </div>
     );
